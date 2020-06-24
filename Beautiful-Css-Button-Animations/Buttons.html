@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="progressbar"></div>
+    <div class="scrollpath"></div>
     <a class="button1" href="#">Hover Over Me</a>
     <a class="button2" href="#">Hover Over Me</a>
     <a class="button3" href="#">Hover Over Me</a>
@@ -23,12 +25,15 @@
     </a>
     <a class="button10" href="#">Hover Over Me</a>
 
+<script>
+    let  progressbar = document.querySelector('.progressbar');
+    var totalHeight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = function(){
+        var progressHeight = (window.pageYOffset/totalHeight) * 100;
+        progressbar.style.height = progressHeight + "%";
 
-
-
-
-
-
-
+    };
+    console.log(totalHeight)
+</script>
 </body>
 </html>
