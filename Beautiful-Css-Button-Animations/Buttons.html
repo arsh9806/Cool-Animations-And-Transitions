@@ -9,6 +9,7 @@
 <body>
     <div class="progressbar"></div>
     <div class="scrollpath"></div>
+    <a class="button11" href="#">Buttons</a>
     <a class="button1" href="#">Hover Over Me</a>
     <a class="button2" href="#">Hover Over Me</a>
     <a class="button3" href="#">Hover Over Me</a>
@@ -25,6 +26,7 @@
     </a>
     <a class="button10" href="#">Hover Over Me</a>
 
+<!-- progress bar -->
 <script>
     let  progressbar = document.querySelector('.progressbar');
     var totalHeight = document.body.scrollHeight - window.innerHeight;
@@ -34,6 +36,24 @@
 
     };
     console.log(totalHeight)
+</script>
+
+<!-- ripple Buttons -->
+<script>
+    var button = document.querySelector('.button11');
+    button.addEventListener('click',function(e){
+        let x = e.clientX-e.target.offsetLeft;
+        let y = e.clientY-e.target.offsetTop;
+        let ripple = document.createElement('span');
+        ripple.style.left = x + "px";
+        ripple.classList.add('ripple');
+        ripple.style.top = y + "px";
+        button.appendChild(ripple);
+        setTimeout(()=>{
+            ripple.remove();
+        },700)
+
+    });
 </script>
 </body>
 </html>
