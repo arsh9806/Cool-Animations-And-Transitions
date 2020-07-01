@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Neumorphism Clock</title>
+</head>
+<body>
+    <div class="clock">
+        <div class="hour">
+            <div class="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc"></div>
+        </div>
+
+    </div>
+    <script>
+        var hour = document.querySelector('.hr');
+        var min = document.querySelector('.mn');
+        var sec = document.querySelector('.sc');
+        setInterval(()=>{
+        var today = new Date();
+        var hours = today.getHours();
+        var mins = today.getMinutes();
+        var secs = today.getSeconds();
+        var hourDegree = 360/12;
+        var minDegree = 360/60;
+        hour.style.transform = "translateX(-50%) translateY(-100%) rotateZ("+hours*hourDegree+"deg)";
+        min.style.transform = "translateX(-50%) translateY(-100%) rotateZ("+mins*minDegree+"deg)";
+        sec.style.transform = "translateX(-50%) translateY(-100%) rotateZ("+secs*minDegree+"deg)";
+
+        },1000)
+
+        console.log(hour);
+        
+    </script>
+</body>
+</html>
