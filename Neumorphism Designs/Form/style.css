@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+body{
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: Poppins;
+    background-color: #131419;
+    color: white;
+}
+.form{
+    width: 300px;
+    border: 2px solid #131419;
+    padding: 2.5rem;
+    padding-top: 1.5rem;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
+                5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    color: #c7c7c7;
+    font-size: 20px;
+    font-weight: 100;
+}
+.credentials{
+    width: 100%;
+}
+.credentials label{
+    display: block;
+    margin-bottom: 5px;
+    padding-left: 0;
+    font-size: 18px;
+    color: rgb(206, 206, 206);
+}
+.credentials input{
+    background-color: inherit;
+    border: none;
+    border: 3px solid #131419;
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.05),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.3);
+    height: 50px;
+    width: 90%;
+    padding-left: 1rem;
+    font-size: 18px;
+    border-radius: 40px;
+    color: #03a9f4;
+    font-family: inherit;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+#submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131419;
+    border-radius: 40px;
+    width: 8rem;
+    color: #03a9f4;
+    padding: 1rem;
+    margin: 1rem auto;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.05),
+    2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+.forgot{
+    margin: 1rem;
+    text-align: center;
+    font-size: 18px;
+    color: #37373b;
+}
+.click-here{
+    color: #cc0022;
+}

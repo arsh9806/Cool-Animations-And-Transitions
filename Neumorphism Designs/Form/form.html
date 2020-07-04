@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <div class="header">
+            <h2>LOGIN</h2>
+        </div>
+        <div class="credentials">
+
+            <label for="emaild">Username</label>
+            <input type="text" id="emailId" placeholder="example@xyz.com">
+            <label>Password</label>
+            <input type="password">
+        </div>
+        <a id="submit">Sign In</a>
+        <p class="forgot">Forgot Password? <a href="#" class="click-here">Click Here</a></p>
+
+    </div>
+<script>    
+    var button = document.querySelector('#submit');
+    button.addEventListener('mousedown',function(){
+        button.style.boxShadow = "inset -2px -2px 6px rgba(255, 255, 255, 0.05), inset 2px 2px 8px rgba(0, 0, 0, 0.3)";
+    });
+    button.addEventListener('mouseup',function(){
+    button.style.boxShadow = "-2px -2px 6px rgba(255, 255, 255, 0.05),2px 2px 8px rgba(0, 0, 0, 0.3)";
+
+    });
+    // button.addEventListener('')
+</script>
+</body>
+
+</html>
