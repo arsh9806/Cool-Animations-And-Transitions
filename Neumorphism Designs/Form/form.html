@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/89ed126e65.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,22 +20,40 @@
             <input type="text" id="emailId" placeholder="example@xyz.com">
             <label>Password</label>
             <input type="password">
+            <div class="radioButtons">
+                <p class="radioLabel">Are You Virgin?</p>
+                <label for="">
+                    <input type="radio" name="virgin" class="radio">
+                    <i class="fas fa-check"></i>
+                </label>
+                <label for="">
+                    <input type="radio" name="virgin" class="radio">
+                    <i class="fas fa-times"></i>
+                </label>
+            </div>
+
         </div>
         <a id="submit">Sign In</a>
         <p class="forgot">Forgot Password? <a href="#" class="click-here">Click Here</a></p>
 
     </div>
-<script>    
-    var button = document.querySelector('#submit');
-    button.addEventListener('mousedown',function(){
-        button.style.boxShadow = "inset -2px -2px 6px rgba(255, 255, 255, 0.05), inset 2px 2px 8px rgba(0, 0, 0, 0.3)";
-    });
-    button.addEventListener('mouseup',function(){
-    button.style.boxShadow = "-2px -2px 6px rgba(255, 255, 255, 0.05),2px 2px 8px rgba(0, 0, 0, 0.3)";
+    <script>
+        var button = document.querySelector('#submit');
+        button.addEventListener('touchstart', clicked);
+        button.addEventListener('mousedown', clicked);
 
-    });
+        function clicked() {
+            button.style.boxShadow = "inset -2px -2px 6px rgba(255, 255, 255, 0.05), inset 2px 2px 8px rgba(0, 0, 0, 0.3)";
+        }
+        button.addEventListener('touchend', left);
+        button.addEventListener('mouseup', left);
+
+        function left() {
+            button.style.boxShadow = "-2px -2px 6px rgba(255, 255, 255, 0.05),2px 2px 8px rgba(0, 0, 0, 0.3)";
+
+        }
     // button.addEventListener('')
-</script>
+    </script>
 </body>
 
 </html>
